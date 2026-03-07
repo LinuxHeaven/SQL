@@ -57,3 +57,34 @@ UPDATE emp SET salary=40000 WHERE empid=2;
 
 DELETE FROM emp WHERE empid=5;
 -- delete row
+
+SELECT * FROM emp WHERE salary BETWEEN 35000 AND 40000;
+-- between usage
+
+SELECT DISTINCT full_name,city FROM emp;
+-- distinct usage
+
+SELECT * FROM emp WHERE city IN("Kolkata","Delhi");
+SELECT * FROM emp WHERE city NOT IN("Kolkata","Delhi");
+-- column filter
+
+SELECT * FROM emp ORDER BY age;
+SELECT * FROM emp ORDER BY age ASC;
+-- ascending order
+
+SELECT * FROM emp ORDER BY age DESC;
+-- descending order
+
+SELECT * FROM emp WHERE full_name LIKE 'S%';
+-- first letter filter
+SELECT * FROM emp WHERE full_name LIKE '%a';
+-- last letter filter
+SELECT * FROM emp WHERE full_name LIKE '%ne%';
+-- middle letters filter
+
+SELECT MAX(salary) FROM emp;
+-- maximum
+SELECT MIN(salary) FROM emp;
+-- minimum
+SELECT AVG(salary) FROM emp;
+-- average
